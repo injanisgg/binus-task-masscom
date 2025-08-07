@@ -69,6 +69,10 @@ body {
     border-radius: 50px;
 }
 
+#industry {
+    width: 300px;
+}
+
 /* Mobile L (425px) */
 @media (min-width: 425px) {
     body {
