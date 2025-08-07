@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #f9f9f9;
+    font-size: 12px;
+    padding-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+/* Mobile L (425px) */
+@media (min-width: 425px) {
+    body {
+    font-size: 16px;
+    }
+    .arrow {
+        padding: 6px;
+        font-size: 14px;
+      }
+}
+
+/* Tablet (768px) */
+@media (min-width: 768px) {
+    .arrow {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop (1024px) */
+@media (min-width: 1024px) {
+   
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: orange;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.arrow:hover {
+    background-color: darkorange;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+#learn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: orange;
+    border: none;
+    border-radius: 999px; /* ubah dari 50% */
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.card {
+    padding: 25px 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 20px;
+}
+
+.form {
+    width: 100%;
+    color: grey;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+}
+
+.tabs {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.tab.active {
+  color: orange;
+  border-color: orange;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
